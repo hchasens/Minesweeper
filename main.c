@@ -11,8 +11,6 @@
  *        each block contains its cordanates, in 'x' and 'y' intagers
  *        and two boolean values, 'hasMine' and 'exposed'
  *
- * Discription of point:
- *        A point is set of x and y cordanates
  *
  * Discription of grid:
  *        grid is the land of Minesweeper
