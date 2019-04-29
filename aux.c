@@ -105,14 +105,17 @@ void clearEdge(int x, int y, struct block g[WIDTH][LENGTH], bool calledFromSelf)
  * [getInput description]
  * @param [name] [description]
  */
-void getInput(struct block g[WIDTH][LENGTH]){
+bool getInput(struct block g[WIDTH][LENGTH]){
   int x, y;
   printf("Enter X: ");
   scanf(" %d", &x);
   printf("Enter Y: ");
   scanf(" %d", &y);
-  g[x][y].exposed = true;
-  clearEdge(x, y, g, false);
+  if (g[x][y].exposed != true){
+    g[x][y].exposed = true;
+    clearEdge(x, y, g, false);
+    return true;}
+  return false;
 }
 
 /**

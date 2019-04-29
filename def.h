@@ -14,7 +14,7 @@ void displayGrid(struct block g[WIDTH][LENGTH]);
 void generateMines(struct block g[WIDTH][LENGTH]);
 void exposeAll(struct block g[WIDTH][LENGTH]);
 bool hasHitMine(struct block g[WIDTH][LENGTH]);
-void getInput(struct block g[WIDTH][LENGTH]);
+bool getInput(struct block g[WIDTH][LENGTH]);
 void reset(struct block g[WIDTH][LENGTH]);
 
 void readScores();
