@@ -1,6 +1,5 @@
 #ifndef SYMBOL
 #define SYMBOL value
-#include <stdbool.h>
 
 //will not take grids of more then 100 in LENGTH or WIDTH
 #define WIDTH 20
