@@ -17,15 +17,15 @@
  *        a grid is a two dimetional array of blocks
  */
 
-#include<stdio.h>
-#include<stdbool.h>
-#include<stdlib.h>
-#include<math.h>
-#include"def.h"
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <math.h>
+#include "def.h"
 
 
 //Start of Member Field
-  //main minesweeper feild
+//main minesweeper feild
 struct block grid[WIDTH][LENGTH];
 
 //auxilerary structure used for
@@ -36,7 +36,7 @@ struct block grid[WIDTH][LENGTH];
 
 
 int main(){
-  //readScores();
-  mainMenu(grid);
-  return 0;
+        //readScores();
+        mainMenu(grid);
+        return 0;
 }

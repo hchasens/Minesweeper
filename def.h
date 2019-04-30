@@ -10,8 +10,9 @@
 #define DIFFICULTY 2
 
 //defines block
-struct block{
-  bool hasMine, exposed;};
+struct block {
+        bool hasMine, exposed;
+};
 
 
 void displayGrid(struct block g[WIDTH][LENGTH]);
