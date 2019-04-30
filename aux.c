@@ -216,7 +216,7 @@ void displayGrid(struct block g[WIDTH][LENGTH]){
         printf("%d", suroundingMines(x, y, g));
         printf("\033[0m");}
       //if block is not exposed
-      if ((g[x][y].exposed == false))
+      if (g[x][y].exposed == false)
         printf("#");
 
       //prints out space for athestics
