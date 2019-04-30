@@ -16,3 +16,6 @@ clean with 'make clean'
 ```
   make clean
 ```
+
+
+scores.txt is a plain text file containing all the saves scores
