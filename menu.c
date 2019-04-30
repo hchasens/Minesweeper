@@ -14,19 +14,25 @@
 
 void runGame(struct block g[WIDTH][LENGTH]){
         int score = 0;
+        bool won = false;
         reset(g);
         generateMines(g);
         displayGrid(g);
-        while(!hasHitMine(g)) {
+        while(!hasHitMine(g) && !hadWon(g)) {
                 if(getInput(g)) {
                         score++;
                 }
                 displayGrid(g);
                 printf("Curent Score %d \n", score);
         }
+        if(hadWon(g))
+                won = true;
         exposeAll(g);
         displayGrid(g);
-
+        if(won == true) {
+                score+=100;
+                printf("You Won! Your score is %d\n", score);
+        }
         int choice;
         printf("Would you like to save your score? \n 1. Yes, \n 2. No\n: ");
         scanf("%d", &choice);

@@ -5,7 +5,17 @@
 #include "def.h"
 
 
-
+bool hadWon(struct block g[WIDTH][LENGTH]){
+  bool won = true;
+  for(int y = 0; y < LENGTH; y++) {
+          for(int x = 0; x < WIDTH; x++)
+                  //for evey block if the block does not have a mine and it is not exposed, sets won to false
+                  if(g[x][y].hasMine == false && g[x][y].exposed == false) {
+                          won = false;
+                  }
+  }
+  return won;
+}
 
 void reset(struct block g[WIDTH][LENGTH]){
         for(int y = 0; y < LENGTH; y++) {
