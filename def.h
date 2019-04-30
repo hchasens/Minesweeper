@@ -1,3 +1,5 @@
+#include <stdbool.h>
+
 #ifndef SYMBOL
 #define SYMBOL value
 

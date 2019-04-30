@@ -33,10 +33,7 @@ struct block grid[WIDTH][LENGTH];
 //End of Member Field
 
 
-
-
 int main(){
-        //readScores();
         mainMenu(grid);
         return 0;
 }
