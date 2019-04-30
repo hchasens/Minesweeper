@@ -2,8 +2,9 @@
 #define SYMBOL value
 #include <stdbool.h>
 
-#define WIDTH 10
-#define LENGTH 10
+//will not take grids of more then 100 in LENGTH or WIDTH
+#define WIDTH 20
+#define LENGTH 20
 
 //defines block
 struct block{

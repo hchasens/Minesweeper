@@ -161,22 +161,49 @@ void displayGrid(struct block g[WIDTH][LENGTH]){
     printf("\n");
 
   //prints X axis
-  printf(" ");
+    //add scalability for grids bigger then 10
+  if(WIDTH > 10)
+    printf("   ");
+  else
+    printf(" ");
+    //ends scalability for x ais
+  //displays x grid
   for(int x = 0; x < WIDTH; x++)
-    printf(" %d", x);
+    //if width is biger then 10 then is scales for double digits
+    //must scail seperatly single and double digits
+      //scales for single digits here
+    if(WIDTH > 10 && x < 10)
+      printf(" %d ", x);
+      //scales for double digits here
+    else if(WIDTH > 10 && x >= 10)
+      printf(" %d", x);
+    //scales for grid under 10 in width
+    else
+      printf(" %d", x);
   printf("\n");
 
-  //prints g and Y axis
+  //prints g (grid) and Y axis
+  //start of Y axis labiling and scalable spacing for blocks
   for(int y = 0; y < LENGTH; y++){
     printf("%d ", y);
+    //gets the horizontal spaceing for blocks right for grids over 10
+    if(LENGTH > 10 && y < 10)
+      printf(" ");
     for(int x = 0; x < WIDTH; x++){
+      //gets the verticle spacing for blocks rigth for grids over 10
+      if(WIDTH > 10)
+        printf(" ");
+    //end of Y axis labiling and scalable spacing for blocks
+    //start of acual display
       //if block is exposed and has mine
       if ((g[x][y].exposed == true) && (g[x][y].hasMine == true)){
+        //add color red
         printf("\033[1;31m");
         printf("X");
         printf("\033[0m");}
       //if block is exposed has does not have mine
       if ((g[x][y].exposed == true) && (g[x][y].hasMine == false)){
+        //add color green
         printf("\033[0;32m");
         printf("%d", suroundingMines(x, y, g));
         printf("\033[0m");}
