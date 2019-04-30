@@ -4,6 +4,9 @@
 #include<time.h>
 #include"def.h"
 
+
+
+
 void reset(struct block g[WIDTH][LENGTH]){
   for(int y = 0; y < LENGTH; y++){
     for(int x = 0; x < WIDTH; x++){
@@ -127,7 +130,12 @@ void generateMines(struct block g[WIDTH][LENGTH]){
   for(int y = 0; y < LENGTH; y++){
     for(int x = 0; x < WIDTH; x++){
       //25% chance of mined land
-      g[x][y].hasMine = (rand() & 1) && (rand() & 1);
+      if(DIFFICULTY == 1)
+        g[x][y].hasMine = (rand() & 1);
+      if(DIFFICULTY == 2)
+        g[x][y].hasMine = (rand() & 1) && (rand() & 1);
+      if(DIFFICULTY == 3)
+        g[x][y].hasMine = (rand() & 1) && (rand() & 1) && (rand() & 1);
     }}
 }
 
