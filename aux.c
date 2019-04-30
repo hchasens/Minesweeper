@@ -105,8 +105,8 @@ void clearEdge(int x, int y, struct block g[WIDTH][LENGTH], bool calledFromSelf)
 }
 
 /**
- * [getInput description]
- * @param [name] [description]
+ * [getInput: gets the input from user]
+ * @param [2d array of struct bock g] [minesweeper grid]
  */
 bool getInput(struct block g[WIDTH][LENGTH]){
   int x, y;
