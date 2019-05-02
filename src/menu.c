@@ -15,11 +15,18 @@
 void runGame(struct block g[WIDTH][LENGTH]){
         int score = 0;
         bool won = false;
+        //resets all blocks to unexposed
         reset(g);
+        //generates mines
         generateMines(g);
+        //displays blank grid for player to chose initial strike
+        displayGrid(g);
+        //get first input, first input will alwase have true as the boolean so the first entry will never hit a mine
+        getInput(g, true);
+        //displays initial grid
         displayGrid(g);
         while(!hasHitMine(g) && !hadWon(g)) {
-                if(getInput(g)) {
+                if(getInput(g, false)) {
                         score++;
                 }
                 displayGrid(g);
