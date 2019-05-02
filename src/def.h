@@ -23,6 +23,7 @@ void exposeAll(struct block g[WIDTH][LENGTH]);
 bool hasHitMine(struct block g[WIDTH][LENGTH]);
 bool getInput(struct block g[WIDTH][LENGTH]);
 void reset(struct block g[WIDTH][LENGTH]);
+bool hadWon(struct block g[WIDTH][LENGTH]);
 
 void readScores();
 void saveScores(int score);

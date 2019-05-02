@@ -15,6 +15,12 @@
  * Discription of grid:
  *        grid is the land of Minesweeper
  *        a grid is a two dimetional array of blocks
+ *
+ *
+ * Algorithm:
+ * (preprocessor)
+ *
+ *
  */
 
 #include <stdio.h>
