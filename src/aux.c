@@ -150,11 +150,13 @@ void generateMines(struct block g[WIDTH][LENGTH]){
         srand(time(0));
         for(int y = 0; y < LENGTH; y++) {
                 for(int x = 0; x < WIDTH; x++) {
-                        //25% chance of mined land
+                        //50% chance of mine generation
                         if(DIFFICULTY == 1)
                                 g[x][y].hasMine = (rand() & 1);
+                        //25% chance of mine generation
                         if(DIFFICULTY == 2)
                                 g[x][y].hasMine = (rand() & 1) && (rand() & 1);
+                        //15% chance of mine generation
                         if(DIFFICULTY == 3)
                                 g[x][y].hasMine = (rand() & 1) && (rand() & 1) && (rand() & 1);
                 }
