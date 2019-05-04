@@ -124,16 +124,20 @@ void clearEdge(int x, int y, struct block g[WIDTH][LENGTH], bool calledFromSelf)
  * @param [2d array of struct bock g] [minesweeper grid]
  */
 bool getInput(struct block g[WIDTH][LENGTH], bool firstInput){
-        int x, y;
-        printf("Enter X: ");
-        scanf(" %d", &x);
-        printf("Enter Y: ");
-        scanf(" %d", &y);
+        int x = -1, y = -1;
+        while(x < 0 || x > WIDTH) {
+                printf("Enter X: ");
+                scanf(" %d", &x);
+        }
+        while(y < 0 || y > LENGTH) {
+                printf("Enter Y: ");
+                scanf(" %d", &y);
+        }
         //makes it so that first input will never land on mine
         if(firstInput)
                 g[x][y].hasMine = false;
         //returns true if the block has not been called on befor
-        if (g[x][y].exposed != true) {
+        if (g[x][y].exposed != true && x < WIDTH && y < LENGTH) {
                 g[x][y].exposed = true;
                 clearEdge(x, y, g, false);
                 return true;

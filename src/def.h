@@ -9,7 +9,7 @@
 
 //difficulty 3 easy, 2 middium, 1 hard
 //difficulty algorithm is logrithem, in hard each block at a 50% chance of being mined, in middium 25% and in easy 12.5%
-#define DIFFICULTY 2
+#define DIFFICULTY 3
 
 //defines block
 struct block {
