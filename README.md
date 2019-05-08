@@ -20,3 +20,5 @@ clean with 'make clean'
 Winning will automatically add 100 points to your score.
 
 ```scores.txt``` is a plain text file containing all the saves scores
+
+Read the License
